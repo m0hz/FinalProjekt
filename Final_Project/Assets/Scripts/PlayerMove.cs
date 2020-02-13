@@ -27,8 +27,8 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
+        //if (EventSystem.current.IsPointerOverGameObject())
+           // return;
         if (characterController.isGrounded)
         {
             // We are grounded, so recalculate
