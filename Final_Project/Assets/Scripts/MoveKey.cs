@@ -13,8 +13,8 @@ public class MoveKey : MonoBehaviour
 
         key.gameObject.SetActive(true);
 
-        key.transform.localRotation = Quaternion.identity;
-        key.transform.position = Vector3.zero;
+       // key.transform.localRotation = Quaternion.identity;
+        key.transform.localPosition = Vector3.zero;
 
     }
 
