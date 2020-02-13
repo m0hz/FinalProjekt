@@ -7,16 +7,11 @@ public class Trigger : MonoBehaviour
     public GameObject Door = null;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            Door.SetActive(true);
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag =="Player")
+        if (other.gameObject.tag == "BlueKey")
         {
             Door.SetActive(false);
         }
     }
+    
+    
 }
