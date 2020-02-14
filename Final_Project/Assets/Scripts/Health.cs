@@ -41,6 +41,6 @@ public class Health : MonoBehaviour
 
 
         if (health <= 0f)
-            SceneManager.LoadScene("game_over");
+            Destroy(gameObject);
     }
 }
