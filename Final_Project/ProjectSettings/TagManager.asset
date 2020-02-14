@@ -19,10 +19,10 @@ TagManager:
   - PostProcessing
   - Player
   - Enemy
-  - 
-  - 
-  - 
-  - 
+  - Player Weapon
+  - Enemy Weapon
+  - Weapon
+  - Exit
   - 
   - 
   - 
