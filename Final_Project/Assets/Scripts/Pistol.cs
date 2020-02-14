@@ -32,7 +32,7 @@ public class Pistol : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
-            Health target = hit.transform.GetComponent<Health>();
+            PlayerHealth target = hit.transform.GetComponent<PlayerHealth>();
             if (target != null)
             {
                 target.TakeDamage(damage);
