@@ -5,23 +5,37 @@ using UnityEngine;
 public class PickupItem : MonoBehaviour
 {
     public KeyCode interactKey = KeyCode.E;
-    
+   public GameObject MainShpere;
+    private PlayerMove m_player;
+
     public Item item;
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-     if (Input.GetKeyDown(interactKey))
+        Debug.Log("Collision Detected " + gameObject.name);
+
+        if (other.gameObject.tag == "Player")
         {
 
-        
-        Debug.Log("Picking up" + item.name);
-         bool wasPickUp =   Inventory.instance.Add(item);
-            if (wasPickUp)
-        Destroy(gameObject);
+            //if (Input.GetKeyDown(interactKey))
+           // {
+
+
+                Debug.Log("Picking up" + item.name);
+                bool wasPickUp = Inventory.instance.Add(item);
+                if (wasPickUp)
+                    Destroy(MainShpere);
+           // }
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Collision unDetected");
+    }
 
-   
-   
+
+
+
+
 }
